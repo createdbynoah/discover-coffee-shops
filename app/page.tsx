@@ -1,10 +1,14 @@
 import Banner from '@/components/banner.client';
-import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
+  const storeId = 'dark-horse-coffee';
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Banner />
-    </main>
+    <div className="mb-56">
+      <main className="mx-auto mt-10 max-w-6xl px-4">
+        <Banner />
+        <Link href={`/coffee-shop/${storeId}`}>Dark Horse Coffee</Link>
+      </main>
+    </div>
   );
 }
